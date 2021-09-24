@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+</head>
+
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+
+<style>
+    body,
+    html,
+    .main {
+        height: 100%;
+    }
+
+    section {
+        min-height: 100%;
+    }
+
+    /*page*/
+    html {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    body {
+        font-size: 26px;
+        padding-bottom: 6px;
+
+    }
+
+    #section1 img {
+        float: left;
+        width: 30%;
+        margin-right: 15px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    p.title {
+        font-size: 28px;
+        margin-top: -30px;
+        font-weight: lighter;
+        text-transform: uppercase;
+    }
+
+    p.ex1 {
+        margin: -20px 0px 20px 25px;
+    }
+
+    a.ex2 {
+        color: green;
+        font-size: 24px;
+        font-weight: lighter;
+        padding-left: 410px;
+    }
+
+    #section1 {
+        height: 800px;
+        /* background-color: pink;*/
+    }
+
+    #section2 {
+        height: 1200px;
+        /* background-color: yellow;*/
+    }
+
+    #section4 {
+        height: 1600px;
+        /* background-color: yellow;*/
+    }
+
+    #section4 img,
+    #book img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        border-style: ridge;
+    }
+
+    #book img {
+        width: 50%;
+    }
+
+    /*navbar*/
+    .nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .nav li {
+        display: inline;
+    }
+
+    .nav a {
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+        color: #3c153b;
+        margin-top: 25px;
+    }
+
+    nav .active {
+        color: #db2b39;
+    }
+
+    hr {
+        width: 50%;
+    }
+
+    /*gallery*/
+    .row {
+        padding-left: 20%;
+    }
+
+    /* Create two equal columns that sits next to each other */
+    .column {
+        padding-left: 26%;
+    }
+
+  </style>
+
+<div id="navbar">
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="uiux.html">UI/ UX</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="typography.html">Typography</a></li>
+        </ul>
+        <hr>
+    </nav>
+</div>
+
+<body>
+
+    <div class="main" id="section1" id="content" class="content">
+
+
+        <img src="../MyPortfolio/images/17212260_1723724804310394_5435361964852447072_o.jpg" alt="Profile Image">
+        <h1>Christopher Meza</h1>
+        <p class="title">Web Development & Design</p>
+        <br>
+        <p class="ex1"> Hi. My name is Christopher Meza. I am currently studying at Brigham Young University
+            -
+            Idaho and am majoring in Web Design. In studying web design I have acquired skills that
+            have helped me
+            to
+            become experienced in visual design.
+
+            In addition to studying I have also become involved in several
+            extracurricular groups which include a martial arts group, the social activities
+            and events group, and several sports teams. Over the semesters, I have held leadership positions in most
+            of these clubs.
+            As I will be graduating in the coming year, I am looking for an internship where I can further develop
+            and
+            utilize
+            the skills which I have acquired.
+        </p>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+        <a class="ex2" href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
+
+    </div>
+
+
+    <div class="main" id="section2">
+
+        <h1>Photography</h1>
+
+        <div class="column">
+            <img src="../MyPortfolio/images/209b.jpg" alt="Girl reading" style="width:348px">
+            <img src="../MyPortfolio/images/Alysn1 (2) - Copy.jpg" alt="Girl putting make up on" style="width:248px">
+        </div>
+
+        <div class="row">
+            <img src="../MyPortfolio/images/Alaura.jpg" alt="3 girls" style="width:74%">
+        </div>
+
+
+        <br><br>
+        <a class="ex2" href="#section4">Click Me to Smooth Scroll to Section 3 Below</a>
+
+    </div>
+
+
+
+    <div class="main" id="section4">
+
+        <h1>Typography</h1>
+        <br>
+
+        <div>
+
+            <img src="../MyPortfolio/images/Layout 1 (2).jpg" alt="magazine article">
+
+            <br>
+            <br>
+
+            <img src="../MyPortfolio/images/Layout2c.jpg" alt="magazine article">
+
+            <br>
+            <br>
+
+
+            <div id="book"> <img src="../MyPortfolio/images/Chapter 1.jpg" alt="book layout">
+
+                <br>
+                <br>
+
+                <img src="../MyPortfolio/images/Chapter 12.jpg" alt="book layout">
+
+            </div>
+        </div>
+
+
+
+
+
+        <br><br>
+        <a class="ex2" href="#navbar">Click Me to Smooth Scroll to Section 1 Above</a>
+        <br><br>
+    </div>
+
+
+
+
+
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>
